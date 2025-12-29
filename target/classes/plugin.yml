@@ -1,0 +1,10 @@
+name: ServerEssentials
+version: '0.1'
+main: de.matzethan.serverEssentials.ServerEssentials
+api-version: '1.21'
+authors: [ matzethan ]
+description: easy commands to switch your server
+commands:
+  lobby:
+  smp:
+  bedwars:
