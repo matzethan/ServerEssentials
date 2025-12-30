@@ -44,7 +44,7 @@ public class SMPCommand implements CommandExecutor {
         }, 40L);
 
         Bukkit.getScheduler().runTaskLater(plugin, () -> {
-            commandSender.sendMessage(ChatColor.YELLOW + "Teleporting ..");
+            commandSender.sendMessage(ChatColor.YELLOW + "Teleporting ...");
 
             ByteArrayDataOutput out = ByteStreams.newDataOutput();
             out.writeUTF("Connect");

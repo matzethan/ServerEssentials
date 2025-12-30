@@ -58,7 +58,7 @@ public class UpdateCommand implements CommandExecutor {
                     commandSender.sendMessage(ChatColor.GREEN + "Ein Update ist verfügbar: " + ChatColor.WHITE + latestVersion);
                     commandSender.sendMessage(ChatColor.GREEN + "Download: " + ChatColor.AQUA + "https://github.com/" + user + "/" + repo + "/releases");
                 } else {
-                    commandSender.sendMessage(ChatColor.GREEN + "ServerEssentials ist aktuell! (v" + currentVersion + ")");
+                    commandSender.sendMessage(ChatColor.GREEN + "ServerEssentials ist aktuell! (" + currentVersion + ")");
                 }
             }
         } catch (Exception e) {

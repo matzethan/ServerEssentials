@@ -1,4 +1,5 @@
-de\matzethan\serverEssentials\commands\SMPCommand.class
-de\matzethan\serverEssentials\ServerEssentials.class
 de\matzethan\serverEssentials\commands\LobbyCommand.class
 de\matzethan\serverEssentials\commands\BedwarsCommand.class
+de\matzethan\serverEssentials\commands\SMPCommand.class
+de\matzethan\serverEssentials\ServerEssentials.class
+de\matzethan\serverEssentials\ServerEssentials$1.class

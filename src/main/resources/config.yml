@@ -1,0 +1,31 @@
+# ServerEssentials Configuration
+enabled: true
+
+auto-update-checker:
+  enabled: true
+  github-user: "matzethan"
+  github-repo: "ServerEssentials"
+
+# Hier kannst du unendlich viele Befehle hinzufügen! 📝
+teleport-commands:
+  smp: # Das ist der interne Name
+    command-name: "smp"
+    target-server: "SMP"
+    countdown-seconds: 3
+    cancel-damage: true
+    message: "&eYou will teleport to SMP ..."
+  lobby:
+    command-name: "lobby"
+    target-server: "lobby"
+    countdown-seconds: 0
+    cancel-damage: false
+    message: "&aYou will teleport to Lobby ..."
+  bedwars:
+    command-name: "bedwars"
+    target-server: "beadwars"
+    countdown-seconds: 0
+    cancel-damage: false
+    message: "&aYou will teleport to Bedwars ..."
+
+#DON'T CHANGE THIS
+config-version: 0.4
