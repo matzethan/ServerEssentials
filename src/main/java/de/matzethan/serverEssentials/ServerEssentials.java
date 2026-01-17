@@ -44,8 +44,8 @@ public final class ServerEssentials extends JavaPlugin {
         getCommand("bedwars").setExecutor(new BedwarsCommand(this));
         getLogger().info("The command /bedwars has been activated.");
 
-        getCommand("escapegame").setExecutor(new EscapeGamesCommand(this));
-        getLogger().info("The command /escapegame has been activated.");
+        getCommand("escaperoom").setExecutor(new EscapeGamesCommand(this));
+        getLogger().info("The command /escaperoom has been activated.");
 
         getCommand("se-update").setExecutor(new UpdateCommand(this));
         getLogger().info("The command /se-update has been activated.");

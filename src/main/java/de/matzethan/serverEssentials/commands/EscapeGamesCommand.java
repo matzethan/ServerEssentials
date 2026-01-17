@@ -30,7 +30,7 @@ public class EscapeGamesCommand implements CommandExecutor {
 
         player.setInvulnerable(true);
 
-        player.sendMessage(ChatColor.YELLOW + "You will be teleported to Escape Games...");
+        player.sendMessage(ChatColor.YELLOW + "You will be teleported to EscapeRoom...");
         player.sendMessage(ChatColor.YELLOW + "3");
 
         Bukkit.getScheduler().runTaskLater(plugin, () -> {
@@ -46,7 +46,7 @@ public class EscapeGamesCommand implements CommandExecutor {
 
             ByteArrayDataOutput out = ByteStreams.newDataOutput();
             out.writeUTF("Connect");
-            out.writeUTF("test");
+            out.writeUTF("escaperoom");
 
             player.sendPluginMessage(this.plugin, "BungeeCord", out.toByteArray());
 
