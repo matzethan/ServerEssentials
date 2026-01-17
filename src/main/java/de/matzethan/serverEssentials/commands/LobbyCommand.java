@@ -46,7 +46,7 @@ public class LobbyCommand implements CommandExecutor {
 
             ByteArrayDataOutput out = ByteStreams.newDataOutput();
             out.writeUTF("Connect");
-            out.writeUTF("Lobby");
+            out.writeUTF("lobby");
 
             player.sendPluginMessage(this.plugin, "BungeeCord", out.toByteArray());
 
