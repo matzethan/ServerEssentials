@@ -3,6 +3,8 @@ package de.matzethan.serverEssentials.commands;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
 import de.matzethan.serverEssentials.ServerEssentials;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -30,19 +32,22 @@ public class BedwarsCommand implements CommandExecutor {
 
         player.setInvulnerable(true);
 
-        player.sendMessage(ChatColor.YELLOW + "You will be teleported to Bedwars...");
-        player.sendMessage(ChatColor.YELLOW + "3");
+        player.sendActionBar(Component.text("You will be teleported to Bedwars...", NamedTextColor.YELLOW));
 
         Bukkit.getScheduler().runTaskLater(plugin, () -> {
-            commandSender.sendMessage(ChatColor.YELLOW + "2");
+            player.sendActionBar(Component.text("3", NamedTextColor.YELLOW));
         }, 20L);
 
         Bukkit.getScheduler().runTaskLater(plugin, () -> {
-            commandSender.sendMessage(ChatColor.YELLOW + "1");
+            player.sendActionBar(Component.text("2", NamedTextColor.YELLOW));
         }, 40L);
 
         Bukkit.getScheduler().runTaskLater(plugin, () -> {
-            commandSender.sendMessage(ChatColor.YELLOW + "Teleporting ..");
+            player.sendActionBar(Component.text("1", NamedTextColor.YELLOW));
+        }, 60L);
+
+        Bukkit.getScheduler().runTaskLater(plugin, () -> {
+            player.sendActionBar(Component.text("Teleporting ...", NamedTextColor.GREEN));
 
             ByteArrayDataOutput out = ByteStreams.newDataOutput();
             out.writeUTF("Connect");
@@ -51,7 +56,7 @@ public class BedwarsCommand implements CommandExecutor {
             player.sendPluginMessage(this.plugin, "BungeeCord", out.toByteArray());
 
             player.setInvulnerable(false);
-        }, 60L);
+        }, 80L);
 
         return true;
     }
